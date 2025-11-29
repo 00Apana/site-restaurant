@@ -1,0 +1,643 @@
+
+:root {
+    /* Define Color Palette */
+    --color-primary: #8B0000; /* Deep Red/Maroon - Elegant Accent */
+    --color-secondary: #D4A373; /* Earthy Brown/Cream - Warm Background */
+    --color-text-dark: #333333; /* Dark Grey for Text */
+    --color-text-light: #FFFFFF; 
+    --color-background-main: #F4F4F4;
+    --color-border: #E0E0E0; 
+    
+    
+    --font-heading: 'Georgia', serif; 
+    --font-body: 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: var(--color-background-main);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+main {
+    padding-top: 100px; /* Space for fixed header */
+}
+
+section {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Links */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-text-dark);
+}
+
+/* Buttons (Main CTA) */
+.btn-main, .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn-main {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.btn-main:hover {
+    background-color: #6a0000;
+    color: var(--color-text-light);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+
+/* -------------------------------------------------------------------
+ * HEADER & NAVIGATION
+ * ------------------------------------------------------------------- */
+
+header {
+    background-color: var(--color-text-light);
+    border-bottom: 1px solid var(--color-border);
+    position: fixed; /* Makes the header stay at the top */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#box {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-left: 25px;
+}
+
+nav a {
+    color: var(--color-text-dark);
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav a.active {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+/* -------------------------------------------------------------------
+ * FOOTER
+ * ------------------------------------------------------------------- */
+footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-text-light);
+    padding: 30px 5%;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links a {
+    color: var(--color-secondary);
+    margin: 0 15px;
+    font-size: 0.9em;
+}
+
+.footer-links a:hover {
+    color: var(--color-text-light);
+}
+
+.hero {
+    
+    background: linear-gradient(rgba(142, 138, 167, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('eat.jpg') no-repeat center center;
+    background-size: cover; 
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 100px 5%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-container h2 {
+    font-size: 3em;
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.title-container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Value Proposition (Three Pillars) */
+.value-proposition {
+    text-align: center;
+    padding: 60px 5%;
+    background-color: var(--color-text-light);
+}
+
+.pillars-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.pillar {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--color-background-main);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.pillar h3 {
+    color: var(--color-primary);
+    font-size: 1.4em;
+    margin-top: 10px;
+}
+
+/* Featured Content */
+.featured-content {
+    display: flex;
+    gap: 40px;
+    padding: 60px 5%;
+    align-items: stretch;
+}
+
+.featured-dishes {
+    flex: 2;
+    padding: 20px;
+    border-right: 1px solid var(--color-border);
+}
+
+.dish-card {
+    border: 1px solid var(--color-border);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-teasers {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about-teaser, .hours-location {
+    padding: 20px;
+    background-color: var(--color-text-light);
+    border-left: 5px solid var(--color-secondary);
+    border-radius: 5px;
+}
+
+
+/* -------------------------------------------------------------------
+ * ORDER.HTML STYLES
+ * ------------------------------------------------------------------- */
+
+#order-page-content h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ordering-utility {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--color-text-light);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.time-location-selector label, .time-location-selector select, .time-location-selector input {
+    margin-right: 15px;
+    font-size: 1em;
+    padding: 8px;
+}
+
+.instruction {
+    font-size: 0.9em;
+    margin-top: 15px;
+    color: #666;
+}
+
+/* Menu Layout - Three Columns */
+.menu-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start; /* Important for sticky sidebar */
+}
+
+.menu-sidebar {
+    width: 200px;
+    position: sticky; /* Keep navigation visible while scrolling */
+    top: 100px; 
+    padding: 20px;
+    background-color: var(--color-text-light);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-sidebar a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.menu-items-container {
+    flex-grow: 1; /* Takes up the main space */
+}
+
+.menu-items-container h2 {
+    margin-top: 30px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+/* Dish Card in Order Page */
+.menu-items-container .dish-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-text-light);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.menu-items-container .dish-card h3 {
+    flex-basis: 30%;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+.menu-items-container .dish-card p {
+    flex-basis: 40%;
+    font-size: 0.9em;
+    color: #666;
+    margin: 0;
+}
+
+.price {
+    flex-basis: 15%;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-align: right;
+}
+
+.add-to-cart-btn {
+    flex-basis: 15%;
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #c49666;
+}
+
+/* Shopping Cart Summary Sidebar */
+.shopping-cart-summary {
+    width: 280px;
+    position: sticky;
+    top: 100px;
+    padding: 20px;
+    background-color: var(--color-text-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-totals {
+    border-top: 1px solid var(--color-border);
+    padding-top: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+
+/* -------------------------------------------------------------------
+ * ABOUT.HTML STYLES
+ * ------------------------------------------------------------------- */
+
+.about-hero {
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-image-container img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: var(--color-text-dark);
+}
+
+.philosophy {
+    background-color: var(--color-text-light);
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.philosophy-points {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.point-card {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+}
+
+.team {
+    padding: 60px 5%;
+}
+
+.chef-profile {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 30px;
+    background-color: var(--color-text-light);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.chef-profile img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Circle image */
+    border: 5px solid var(--color-secondary);
+}
+
+.about-cta {
+    text-align: center;
+    padding: 40px 5%;
+}
+
+.about-cta .btn-main, .about-cta .btn-secondary {
+    margin: 10px;
+}
+
+/* -------------------------------------------------------------------
+ * CONTACT.HTML STYLES
+ * ------------------------------------------------------------------- */
+
+#contact-page-content h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.contact-form-container {
+    flex: 2; /* Takes up more space for the form */
+    background-color: var(--color-text-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-details-container {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-family: var(--font-body);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.info-details-container h2 {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.contact-detail {
+    background-color: var(--color-text-light);
+    padding: 20px;
+    border-left: 4px solid var(--color-secondary);
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.contact-detail h3 {
+    font-size: 1.2em;
+    color: var(--color-text-dark);
+}
+
+.contact-detail ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.map-placeholder {
+    height: 250px;
+    background-color: #DDD;
+    text-align: center;
+    line-height: 250px;
+    color: #666;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+
+/* -------------------------------------------------------------------
+ * MEDIA QUERIES (Basic Responsiveness)
+ * ------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+    
+    .featured-content, .contact-layout, .philosophy-points {
+        flex-direction: column;
+    }
+    
+    .menu-layout {
+        flex-direction: column;
+    }
+    
+    .menu-sidebar {
+        width: 100%;
+        position: static; /* Unstick on smaller screens */
+    }
+    
+    .shopping-cart-summary {
+        width: 100%;
+        position: static;
+        margin-top: 30px;
+    }
+    
+    .chef-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .featured-dishes {
+        border-right: none;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .pillars-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+    
+    .menu-items-container .dish-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    
+    .menu-items-container .dish-card h3,
+    .menu-items-container .dish-card p,
+    .price,
+    .add-to-cart-btn {
+        width: 100%;
+        text-align: left;
+        margin-top: 5px;
+    }
+    
+    .price {
+        font-size: 1.2em;
+        order: -1; /* Move price to the top visually */
+        margin-bottom: 5px;
+    }
+}

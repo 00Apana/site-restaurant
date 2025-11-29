@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online from The Meridian Table</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    
+    <header>
+        <div id="box">
+            <h1 class="logo">Meridian Table</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="order.html" class="active">Order Online</a></li> 
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="order-page-content">
+        <h1>Order for Pickup or Delivery</h1>
+        
+        <section class="ordering-utility">
+            <div class="time-location-selector">
+                <label for="order-type">I want to order for:</label>
+                <select id="order-type" name="order-type">
+                    <option value="pickup">Pickup</option>
+                    <option value="delivery">Delivery</option>
+                </select>
+                
+                <label for="order-time">Time:</label>
+                <input type="time" id="order-time" name="order-time" value="19:30">
+            </div>
+            <p class="instruction">Please select your preferred option above before browsing the menu.</p>
+        </section>
+
+        <section class="menu-layout">
+            
+            <aside class="menu-sidebar">
+                <h2>Menu Categories</h2>
+                <ul>
+                    <li><a href="#appetizers">Appetizers</a></li>
+                    <li><a href="#entrees">Signature Entrees</a></li>
+                    <li><a href="#sides">Sides & Shares</a></li>
+                    <li><a href="#desserts">Desserts</a></li>
+                </ul>
+            </aside>
+            
+            <div class="menu-items-container">
+                
+                <h2 id="appetizers">Appetizers</h2>
+                <div class="dish-card">
+                    <h3>Truffle Parmesan Fries</h3>
+                    <p>Crispy hand-cut fries tossed with white truffle oil, rosemary, and aged Parmesan.</p>
+                    <span class="price">$12.50</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="dish-card">
+                    <h3>Seasonal Bruschetta</h3>
+                    <p>Grilled artisan bread topped with fresh tomatoes, basil, garlic, and balsamic glaze.</p>
+                    <span class="price">$9.00</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <h2 id="entrees">Signature Entrees</h2>
+                <div class="dish-card">
+                    <h3>Atlantic Cedar-Plank Salmon</h3>
+                    <p>Sustainably sourced salmon roasted on a cedar plank with a lemon-herb butter. (GF)</p>
+                    <span class="price">$28.00</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="dish-card">
+                    <h3>The Meridian Burger</h3>
+                    <p>Signature house-ground blend, bacon jam, aged cheddar, and arugula on a brioche bun.</p>
+                    <span class="price">$18.50</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <h2 id="desserts">Desserts</h2>
+                 <div class="dish-card">
+                    <h3>Chocolate Lava Cake</h3>
+                    <p>Rich, molten chocolate cake served warm with a scoop of vanilla bean ice cream.</p>
+                    <span class="price">$10.00</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+            </div>
+            
+            <aside class="shopping-cart-summary">
+                <h2>Your Order</h2>
+                <div class="cart-items-list">
+                    <p>Items will appear here when added from the menu.</p>
+                </div>
+                <div class="cart-totals">
+                    <p>Subtotal: <span id="subtotal">$0.00</span></p>
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </aside>
+            
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 The Meridian Table. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="order.html">Order Online</a>
+                <a href="contact.html">Contact Us</a>
+                </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
